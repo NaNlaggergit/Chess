@@ -45,8 +45,6 @@ class Program
         string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Piece.txt");
         Board board = new Board();
         string[] lines = File.ReadAllLines(filePath);
-        if (lines.Length < 1 || lines.Length >= 10)
-            throw new Exception("Количество фигур должно быть в пределах от 1<x<=10");
         foreach(string line in lines)
         {
             string[] parts = line.Split(' ');

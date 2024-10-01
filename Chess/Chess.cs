@@ -45,6 +45,8 @@ namespace Chess
         public List<Piece> Pieces = new List<Piece>();
         public void AddPiece(string name,int x,int y)
         {
+            if (Map[x, y] != null)
+                return;
             switch (name)
             {
                 case "king":
